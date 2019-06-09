@@ -3,7 +3,7 @@ const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 let index = 0;
 
 function init() {
-  document.querySelector('body').addEventListener('keydown', onKeyDownHandler);
+  document.body.addEventListener('keydown', onKeyDownHandler);
 }
 
 function onKeyDownHandler(e) {
@@ -11,7 +11,6 @@ function onKeyDownHandler(e) {
 
   if (key === code[index]) {
     index++;
-    console.log(index);
 
     if (index === code.length) {
       alert("Hurray!");
@@ -22,3 +21,5 @@ function onKeyDownHandler(e) {
     index = 0;
   }
 }
+
+init();
